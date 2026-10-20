@@ -3,100 +3,174 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Undangan HUT Perusahaan</title>
+  <meta name="description" content="Undangan Perayaan HUT Perusahaan" />
+  <title>Undangan HUT Perusahaan — PT Maju Bersama</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- HERO -->
-  <section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <p class="hero-label">UNDANGAN HUT PERUSAHAAN</p>
-      <h1 class="hero-company">PT MAJU BERSAMA</h1>
-      <p class="hero-year">Tahun 2027</p>
+  <header class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grain"></div>
+
+    <nav class="topbar">
+      <div class="brand">
+        <span class="brand-mark">MB</span>
+        <span class="brand-name">PT Maju Bersama</span>
+      </div>
+      <span class="topbar-year">Anniversary · 2027</span>
+    </nav>
+
+    <div class="hero-inner">
+      <p class="eyebrow">Undangan Resmi</p>
+      <h1 class="hero-title">Perayaan Hari Jadi<br><em>Perusahaan</em></h1>
+      <div class="hero-divider"></div>
+      <p class="hero-sub">Sebuah momen untuk merayakan perjalanan,<br>menghormati dedikasi, dan menyambut babak baru.</p>
+
       <div class="hero-guest">
-        <span>Kepada Yth.</span>
-        <h2>Tamu Undangan</h2>
+        <span class="guest-label">Kepada Yth.</span>
+        <span class="guest-name">Bapak / Ibu Tamu Undangan</span>
+      </div>
+
+      <a href="#undangan" class="btn btn-light">Buka Undangan</a>
+    </div>
+
+    <div class="hero-scroll">
+      <span></span>
+    </div>
+  </header><!-- SAMBUTAN -->
+<section class="section intro" id="undangan">
+  <div class="container narrow">
+    <p class="eyebrow dark">Dengan Penuh Rasa Syukur</p>
+    <h2 class="section-title">Sebuah Undangan Kehormatan</h2>
+    <div class="rule"></div>
+    <p class="lead">
+      Dengan hormat, kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri
+      Perayaan Hari Jadi Perusahaan <strong>PT Maju Bersama</strong>.
+    </p>
+    <p class="body-text">
+      Kehadiran dan doa restu Anda merupakan kehormatan bagi kami dalam
+      merayakan pencapaian, menghargai dedikasi, serta menatap masa depan
+      yang lebih gemilang bersama.
+    </p>
+  </div>
+</section>
+
+<!-- INFORMASI ACARA -->
+<section class="section event">
+  <div class="container">
+    <div class="event-head">
+      <p class="eyebrow">Detail Acara</p>
+      <h2 class="section-title light">Informasi Perayaan</h2>
+    </div>
+
+    <div class="event-grid">
+      <div class="event-info">
+        <div class="info-row">
+          <span class="info-key">Hari / Tanggal</span>
+          <span class="info-val">Sabtu, 20 Juni 2027</span>
+        </div>
+        <div class="info-row">
+          <span class="info-key">Waktu</span>
+          <span class="info-val">08.00 WIB — Selesai</span>
+        </div>
+        <div class="info-row">
+          <span class="info-key">Lokasi</span>
+          <span class="info-val">Grand Ballroom, Gedung Utama<br>Jl. Raya Utama No. 123, Jakarta</span>
+        </div>
+        <div class="info-row">
+          <span class="info-key">Dress Code</span>
+          <span class="info-val">Formal · Nuansa Orange</span>
+        </div>
+        <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn-outline-light">
+          Lihat Lokasi
+        </a>
+      </div>
+
+      <div class="event-countdown">
+        <p class="cd-label">Menuju Hari Perayaan</p>
+        <div class="countdown" id="countdown">
+          <div class="cd-item"><span id="days">00</span><small>Hari</small></div>
+          <div class="cd-item"><span id="hours">00</span><small>Jam</small></div>
+          <div class="cd-item"><span id="minutes">00</span><small>Menit</small></div>
+          <div class="cd-item"><span id="seconds">00</span><small>Detik</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>  <!-- GALERI -->
+  <section class="section gallery">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow dark">Momen & Pencapaian</p>
+        <h2 class="section-title">Jejak Perjalanan Kami</h2>
+        <div class="rule center"></div>
+        <p class="body-text center">Satu visi, banyak kontribusi — merangkai cerita di balik setiap divisi.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <article class="gallery-card">
+          <div class="gallery-thumb thumb-1"></div>
+          <div class="gallery-body">
+            <h3>Divisi Produksi</h3>
+            <p>Ketelitian dan konsistensi di balik kualitas yang kami hadirkan.</p>
+          </div>
+        </article>
+        <article class="gallery-card">
+          <div class="gallery-thumb thumb-2"></div>
+          <div class="gallery-body">
+            <h3>Divisi Marketing</h3>
+            <p>Kreativitas dan strategi dalam membangun kepercayaan pasar.</p>
+          </div>
+        </article>
+        <article class="gallery-card">
+          <div class="gallery-thumb thumb-3"></div>
+          <div class="gallery-body">
+            <h3>Divisi Keuangan</h3>
+            <p>Integritas dan akurasi dalam setiap keputusan bisnis.</p>
+          </div>
+        </article>
+        <article class="gallery-card">
+          <div class="gallery-thumb thumb-4"></div>
+          <div class="gallery-body">
+            <h3>Divisi Human Capital</h3>
+            <p>Membangun budaya kerja yang tumbuh dan berkelanjutan.</p>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- MOMEN -->
-  <section class="moment">
-    <p class="section-label">MOMEN ISTIMEWA</p>
-    <h2 class="section-title">Perayaan HUT Perusahaan</h2>
-    <h3 class="section-subtitle">PT MAJU BERSAMA</h3>
-    <p class="section-desc">
-      Merayakan perjalanan, mengenang kebersamaan, menyambut masa depan.
-    </p>
-    <a href="#undangan" class="btn btn-primary">Lihat Undangan</a>
-  </section>
-
-  <!-- UNDANGAN -->
-  <section class="invitation" id="undangan">
-    <p class="section-label">DENGAN PENUH RASA SYUKUR</p>
-    <h2 class="section-title">Undangan HUT Perusahaan</h2>
-    <p class="section-desc">
-      Dengan hormat, kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri
-      acara perayaan HUT Perusahaan PT MAJU BERSAMA Tahun 2027.
-    </p>
-    <p class="section-desc">
-      Kehadiran dan doa restu Anda menjadi kebahagiaan bagi kami dalam
-      merayakan pencapaian perusahaan.
-    </p>
-    <h3 class="guest-name">Tamu Undangan</h3>
-  </section>  <!-- INFORMASI ACARA -->
-  <section class="event">
-    <p class="section-label">CATAT TANGGALNYA</p>
-    <h2 class="section-title">Informasi Acara</h2>
-    <div class="event-card">
-      <h3>Perayaan HUT PT MAJU BERSAMA Tahun 2027</h3>
-      <p><strong>Tanggal:</strong> Sabtu, 20 Juni 2027</p>
-      <p><strong>Waktu:</strong> 08.00 WIB sampai selesai</p>
-      <p><strong>Tempat:</strong> Gedung Serbaguna — Jl Raya Utama No. 123, Jakarta</p>
-      <a href="https://maps.google.com" target="_blank" class="btn btn-outline">Lihat Lokasi</a>
-    </div>
-  </section>
-
-  <!-- COUNTDOWN -->
-  <section class="countdown-section">
-    <h2 class="section-title">Menuju Hari Perayaan</h2>
-    <div class="countdown" id="countdown">
-      <div class="countdown-item"><span id="days">00</span><small>Hari</small></div>
-      <div class="countdown-item"><span id="hours">00</span><small>Jam</small></div>
-      <div class="countdown-item"><span id="minutes">00</span><small>Menit</small></div>
-      <div class="countdown-item"><span id="seconds">00</span><small>Detik</small></div>
-    </div>
-    <p class="section-desc">Kami menantikan kehadiran Anda.</p>
-  </section>
-
-  <!-- GALERI -->
-  <section class="gallery">
-    <p class="section-label">CERITA DAN KENANGAN</p>
-    <h2 class="section-title">Galeri Kebersamaan</h2>
-    <p class="section-desc">Satu perjalanan, banyak kenangan.</p>
-    <div class="gallery-grid">
-      <div class="gallery-card"><h3>Divisi Produksi</h3><p>Kenangan dan perjalanan tim Produksi.</p></div>
-      <div class="gallery-card"><h3>Divisi Marketing</h3><p>Kreativitas dan cerita tim Marketing.</p></div>
-      <div class="gallery-card"><h3>Divisi Keuangan</h3><p>Kerja sama dan dedikasi tim Keuangan.</p></div>
-      <div class="gallery-card"><h3>Divisi HRD</h3><p>Kenangan dan perjalanan tim HRD.</p></div>
-    </div>
-  </section>
-
   <!-- KONFIRMASI -->
-  <section class="confirmation">
-    <p class="section-label">KONFIRMASI KEHADIRAN</p>
-    <h2 class="section-title">Apakah Anda Hadir?</h2>
-    <p class="section-desc">Mohon konfirmasikan kehadiran Anda.</p>
-    <a href="#" class="btn btn-primary" id="waBtn">Konfirmasi via WhatsApp</a>
-    <p class="small-note">Konfirmasi dikirim melalui WhatsApp panitia.</p>
+  <section class="section confirmation">
+    <div class="container narrow">
+      <p class="eyebrow">Konfirmasi Kehadiran</p>
+      <h2 class="section-title light">Kami Menantikan Kehadiran Anda</h2>
+      <div class="rule center light"></div>
+      <p class="body-text light center">
+        Mohon konfirmasikan kehadiran Anda paling lambat 10 Juni 2027
+        melalui WhatsApp panitia.
+      </p>
+      <a href="#" class="btn btn-light" id="waBtn">Konfirmasi via WhatsApp</a>
+      <p class="note">Konfirmasi akan diteruskan kepada panitia acara.</p>
+    </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="footer">
-    <p>© 2027 PT MAJU BERSAMA — HUT Perusahaan</p>
+    <div class="container footer-inner">
+      <div class="brand">
+        <span class="brand-mark dark">MB</span>
+        <span class="brand-name dark">PT Maju Bersama</span>
+      </div>
+      <p class="footer-note">© 2027 PT Maju Bersama · Anniversary Celebration</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
 </body>
-                            </html>
+</html>
