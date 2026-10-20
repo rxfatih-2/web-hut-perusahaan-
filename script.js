@@ -1,34 +1,61 @@
-// Countdown menuju hari perayaan
-const targetDate = new Date('2027-06-20T08:00:00').getTime();
+/* ===== Countdown ===== */
+const targetDate = new Date('2027-06-20T08:00:00+07:00').getTime();
+const cdEl = {
+  days: document.getElementById('days'),
+  hours: document.getElementById('hours'),
+  minutes: document.getElementById('minutes'),
+  seconds: document.getElementById('seconds')
+};
 
-function updateCountdown() {
-  const now = new Date().getTime();
-  const distance = targetDate - now;
+function tick() {
+  const now = Date.now();
+  const diff = targetDate - now;
 
-  if (distance < 0) {
+  if (diff <= 0) {
     document.getElementById('countdown').innerHTML =
-      '<p style="color:#e65c00;font-weight:700;">Acara telah berlangsung!</p>';
+      '<p style="font-family:\'Cormorant Garamond\',serif;font-size:1.4rem;color:#f7a765;">Acara telah berlangsung</p>';
+    clearInterval(timer);
     return;
   }
 
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  const d = Math.floor(diff / 86400000);
+  const h = Math.floor((diff % 86400000) / 3600000);
+  const m = Math.floor((diff % 3600000) / 60000);
+  const s = Math.floor((diff % 60000) / 1000);
 
-  document.getElementById('days').textContent = String(days).padStart(2, '0');
-  document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-  document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-  document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+  cdEl.days.textContent = String(d).padStart(2, '0');
+  cdEl.hours.textContent = String(h).padStart(2, '0');
+  cdEl.minutes.textContent = String(m).padStart(2, '0');
+  cdEl.seconds.textContent = String(s).padStart(2, '0');
 }
 
-updateCountdown();
-setInterval(updateCountdown, 1000);
+tick();
+const timer = setInterval(tick, 1000);
 
-// Tombol konfirmasi WhatsApp
-document.getElementById('waBtn').addEventListener('click', function (e) {
+/* ===== Reveal on Scroll ===== */
+const revealTargets = document.querySelectorAll(
+  '.section .container, .event-head, .event-grid, .gallery-card'
+);
+
+revealTargets.forEach(el => el.classList.add('reveal'));
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+
+revealTargets.forEach(el => observer.observe(el));
+
+/* ===== Konfirmasi WhatsApp ===== */
+document.getElementById('waBtn').addEventListener('click', e => {
   e.preventDefault();
   const nomor = '6281234567890'; // ganti dengan nomor panitia
-  const pesan = encodeURIComponent('Halo, saya ingin konfirmasi kehadiran untuk HUT Perusahaan PT MAJU BERSAMA.');
-  window.open(`https://wa.me/${nomor}?text=${pesan}`, '_blank');
+  const pesan = encodeURIComponent(
+    'Kepada Panitia HUT PT Maju Bersama,\n\nSaya menyatakan akan hadir pada Perayaan Hari Jadi Perusahaan tanggal 20 Juni 2027.\n\nTerima kasih.'
+  );
+  window.open(`https://wa.me/${nomor}?text=${pesan}`, '_blank', 'noopener');
 });
