@@ -59,3 +59,45 @@ document.getElementById('waBtn').addEventListener('click', e => {
   );
   window.open(`https://wa.me/${nomor}?text=${pesan}`, '_blank', 'noopener');
 });
+/* ===== HAMBURGER DRAWER ===== */
+const hamburger = document.getElementById('hamburger');
+const drawer = document.getElementById('drawer');
+const backdrop = document.getElementById('drawerBackdrop');
+
+function openDrawer() {
+  drawer.classList.add('open');
+  backdrop.classList.add('show');
+  hamburger.classList.add('active');
+  hamburger.setAttribute('aria-expanded', 'true');
+  drawer.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeDrawer() {
+  drawer.classList.remove('open');
+  backdrop.classList.remove('show');
+  hamburger.classList.remove('active');
+  hamburger.setAttribute('aria-expanded', 'false');
+  drawer.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+hamburger.addEventListener('click', () => {
+  drawer.classList.contains('open') ? closeDrawer() : openDrawer();
+});
+backdrop.addEventListener('click', closeDrawer);
+
+// Tutup drawer saat link diklik + smooth scroll
+document.querySelectorAll('[data-nav]').forEach(link => {
+  link.addEventListener('click', () => {
+    closeDrawer();
+  });
+});
+
+// Tutup dengan ESC
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer();
+});
+
+/* ===== COUNTDOWN, REVEAL, WHATSAPP (sama seperti sebelumnya) ===== */
+// ... (kode countdown, reveal, dan waBtn tetap dipertahankan)
