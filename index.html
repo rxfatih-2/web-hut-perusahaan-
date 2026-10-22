@@ -3,14 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Undangan Perayaan HUT Perusahaan" />
-  <title>Undangan HUT Perusahaan — PT Maju Bersama</title>
+  <meta name="description" content="Undangan Perayaan HUT PT RxFatih" />
+  <title>Undangan HUT PT RxFatih</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- HAMBURGER + DRAWER NAV -->
+  <button class="hamburger" id="hamburger" aria-label="Buka menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-head">
+      <img src="assets/logo.png" alt="Logo PT RxFatih" class="drawer-logo" />
+      <span>PT RxFatih</span>
+    </div>
+    <ul class="drawer-list">
+      <li><a href="#undangan" data-nav>Undangan</a></li>
+      <li><a href="#acara" data-nav>Informasi Acara</a></li>
+      <li><a href="#galeri" data-nav>Galeri</a></li>
+      <li><a href="#konfirmasi" data-nav>Konfirmasi</a></li>
+    </ul>
+    <p class="drawer-foot">Anniversary · 2027</p>
+  </nav>
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
 
   <!-- HERO -->
   <header class="hero">
@@ -19,13 +39,14 @@
 
     <nav class="topbar">
       <div class="brand">
-        <span class="brand-mark">MB</span>
-        <span class="brand-name">PT Maju Bersama</span>
+        <img src="assets/logo.png" alt="Logo PT RxFatih" class="brand-logo" />
+        <span class="brand-name">PT RxFatih</span>
       </div>
       <span class="topbar-year">Anniversary · 2027</span>
     </nav>
 
     <div class="hero-inner">
+      <img src="assets/logo.jpg" alt="Logo PT RxFatih" class="hero-logo" />
       <p class="eyebrow">Undangan Resmi</p>
       <h1 class="hero-title">Perayaan Hari Jadi<br><em>Perusahaan</em></h1>
       <div class="hero-divider"></div>
@@ -39,10 +60,8 @@
       <a href="#undangan" class="btn btn-light">Buka Undangan</a>
     </div>
 
-    <div class="hero-scroll">
-      <span></span>
-    </div>
-  </header><!-- SAMBUTAN -->
+    <div class="hero-scroll"><span></span></div>
+        </header><!-- SAMBUTAN -->
 <section class="section intro" id="undangan">
   <div class="container narrow">
     <p class="eyebrow dark">Dengan Penuh Rasa Syukur</p>
@@ -50,7 +69,7 @@
     <div class="rule"></div>
     <p class="lead">
       Dengan hormat, kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri
-      Perayaan Hari Jadi Perusahaan <strong>PT Maju Bersama</strong>.
+      Perayaan Hari Jadi Perusahaan <strong>PT RxFatih</strong>.
     </p>
     <p class="body-text">
       Kehadiran dan doa restu Anda merupakan kehormatan bagi kami dalam
@@ -61,7 +80,7 @@
 </section>
 
 <!-- INFORMASI ACARA -->
-<section class="section event">
+<section class="section event" id="acara">
   <div class="container">
     <div class="event-head">
       <p class="eyebrow">Detail Acara</p>
@@ -86,9 +105,7 @@
           <span class="info-key">Dress Code</span>
           <span class="info-val">Formal · Nuansa Orange</span>
         </div>
-        <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn-outline-light">
-          Lihat Lokasi
-        </a>
+        <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn-outline-light">Lihat Lokasi</a>
       </div>
 
       <div class="event-countdown">
@@ -102,8 +119,8 @@
       </div>
     </div>
   </div>
-</section>  <!-- GALERI -->
-  <section class="section gallery">
+        </section><!-- GALERI -->
+  <section class="section gallery" id="galeri">
     <div class="container">
       <div class="section-head">
         <p class="eyebrow dark">Momen & Pencapaian</p>
@@ -114,28 +131,28 @@
 
       <div class="gallery-grid">
         <article class="gallery-card">
-          <div class="gallery-thumb thumb-1"></div>
+          <div class="gallery-thumb" style="background-image:url('assets/foto1.jpg')"></div>
           <div class="gallery-body">
             <h3>Divisi Produksi</h3>
             <p>Ketelitian dan konsistensi di balik kualitas yang kami hadirkan.</p>
           </div>
         </article>
         <article class="gallery-card">
-          <div class="gallery-thumb thumb-2"></div>
+          <div class="gallery-thumb" style="background-image:url('assets/foto2.jpg')"></div>
           <div class="gallery-body">
             <h3>Divisi Marketing</h3>
             <p>Kreativitas dan strategi dalam membangun kepercayaan pasar.</p>
           </div>
         </article>
         <article class="gallery-card">
-          <div class="gallery-thumb thumb-3"></div>
+          <div class="gallery-thumb" style="background-image:url('assets/foto3.jpg')"></div>
           <div class="gallery-body">
             <h3>Divisi Keuangan</h3>
             <p>Integritas dan akurasi dalam setiap keputusan bisnis.</p>
           </div>
         </article>
         <article class="gallery-card">
-          <div class="gallery-thumb thumb-4"></div>
+          <div class="gallery-thumb" style="background-image:url('assets/foto4.jpg')"></div>
           <div class="gallery-body">
             <h3>Divisi Human Capital</h3>
             <p>Membangun budaya kerja yang tumbuh dan berkelanjutan.</p>
@@ -146,8 +163,9 @@
   </section>
 
   <!-- KONFIRMASI -->
-  <section class="section confirmation">
+  <section class="section confirmation" id="konfirmasi">
     <div class="container narrow">
+      <img src="assets/logo.jpg" alt="Logo PT RxFatih" class="confirm-logo" />
       <p class="eyebrow">Konfirmasi Kehadiran</p>
       <h2 class="section-title light">Kami Menantikan Kehadiran Anda</h2>
       <div class="rule center light"></div>
@@ -164,13 +182,13 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="brand">
-        <span class="brand-mark dark">MB</span>
-        <span class="brand-name dark">PT Maju Bersama</span>
+        <img src="assets/logo.jpg" alt="Logo PT RxFatih" class="brand-logo dark" />
+        <span class="brand-name dark">PT RxFatih</span>
       </div>
-      <p class="footer-note">© 2027 PT Maju Bersama · Anniversary Celebration</p>
+      <p class="footer-note">© 2027 PT RxFatih · Anniversary Celebration</p>
     </div>
   </footer>
 
   <script src="script.js"></script>
 </body>
-</html>
+                            </html>
