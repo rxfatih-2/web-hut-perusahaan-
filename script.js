@@ -53,7 +53,7 @@ revealTargets.forEach(el => observer.observe(el));
 /* ===== Konfirmasi WhatsApp ===== */
 document.getElementById('waBtn').addEventListener('click', e => {
   e.preventDefault();
-  const nomor = '62882003996567'; // ganti dengan nomor panitia
+  const nomor = '6288226621362'; // ganti dengan nomor panitia
   const pesan = encodeURIComponent(
     'Kepada Panitia HUT PT Maju Bersama,\n\nSaya menyatakan akan hadir pada Perayaan Hari Jadi Perusahaan tanggal 20 Juni 2027.\n\nTerima kasih.'
   );
