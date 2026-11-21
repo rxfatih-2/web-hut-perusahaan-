@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satu Dekade RXFatih Group — Perayaan HUT ke-10 (2016–2026)</title>
+    
+    <!-- Google Fonts: Instrument Serif (Editorial Display) & Plus Jakarta Sans (Clean Modern UI) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        terracotta: {
+                            DEFAULT: '#E05A1E',
+                            dark: '#C44812',
+                            deep: '#9E360A',
+                            light: '#F27D49',
+                            soft: '#FFE6D5',
+                            tint: '#FFF1E8'
+                        },
+                        espresso: {
+                            DEFAULT: '#1A1412',
+                            light: '#29201D',
+                            muted: '#3D312D'
+                        },
+                        ivory: {
+                            DEFAULT: '#FFF7F2',
+                            warm: '#F9ECE4',
+                            card: '#FFFFFF'
+                        },
+                        stoneText: {
+                            primary: '#1A1412',
+                            secondary: '#6E5D56',
+                            muted: '#8F7D75'
+                        },
+                        hairline: '#E8D8CE'
+                    },
+                    fontFamily: {
+                        serif: ['"Instrument Serif"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif']
+                    },
+                    maxWidth: {
+                        'editorial': '1200px'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Editorial Refinements, Organic Paper Texture & Subtle Motion */
+        body {
+            background-color: #FFF7F2;
+            color: #1A1412;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+
+        /* Tactile Paper Grain & Subtle Architectural Grid Overlay */
+        .paper-texture {
+            position: relative;
+        }
+        .paper-texture::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 45;
+            opacity: 0.028;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        .architectural-grid {
+            background-size: 48px 48px;
+            background-image: 
+                linear-gradient(to right, rgba(224, 90, 30, 0.045) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(224, 90, 30, 0.045) 1px, transparent 1px);
+        }
+
+        /* Warm Ambient Mesh Glow behind Hero Frame */
+        .hero-ambient-mesh {
+            background: radial-gradient(circle at 75% 35%, rgba(255, 214, 186, 0.75) 0%, rgba(224, 90, 30, 0.12) 45%, rgba(255, 247, 242, 0) 75%);
+        }
+
+        /* Top Reading Progress Hairline */
+        #reading-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            width: 0%;
+            background: linear-gradient(90deg, #C44812, #E05A1E, #F27D49);
+            z-index: 60;
+            transition: width 0.08s ease-out;
+        }
+
+        /* Kinetic Marquee Ticker */
+        @keyframes marqueeScroll {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+        .marquee-track {
+            display: flex;
+            width: max-content;
+            animation: marqueeScroll 32s linear infinite;
+        }
+        .marquee-wrapper:hover .marquee-track {
+            animation-play-state: paused;
+        }
+
+        /* Subtle Editorial Fade-Up Animation */
+        .reveal-element {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1), transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .reveal-element.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Tactile Magnetic / Elevated Card & Button Hover */
+        .tactile-card {
+            transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease;
+        }
+        .tactile-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 30px -10px rgba(26, 20, 18, 0.08);
+            border-color: rgba(224, 90, 30, 0.35);
+        }
+
+        .tactile-btn {
+            transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.25s ease, box-shadow 0.25s ease;
+        }
+        .tactile-btn:hover {
+            transform: translateY(-1.5px);
+            box-shadow: 0 8px 20px -6px rgba(224, 90, 30, 0.45);
+        }
+        .tactile-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Fine Hairline Borders */
+        .hairline-b {
+            border-bottom: 1px solid #E8D8CE;
+        }
+        .hairline-t {
+            border-top: 1px solid #E8D8CE;
+        }
+        .hairline-all {
+            border: 1px solid #E8D8CE;
+        }
+
+        /* Custom Scrollbar for Wish Wall */
+        .wish-scroll::-webkit-scrollbar {
+            width: 5px;
+        }
+        .wish-scroll::-webkit-scrollbar-track {
+            background: #29201D;
+        }
+        .wish-scroll::-webkit-scrollbar-thumb {
+            background: #6E5D56;
+            border-radius: 9999px;
+        }
+
+        /* Interactive Timeline Active State */
+        .milestone-item {
+            transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .milestone-item.active {
+            border-left-color: #E05A1E;
+            background-color: #FFFFFF;
+        }
+    </style>
+</head>
+<body class="paper-texture selection:bg-terracotta/20 selection:text-espresso">
+
+    <!-- Top Viewport Reading Progress Hairline -->
+    <div id="reading-progress" aria-hidden="true"></div>
+
+    <!-- Hidden File Input for Live Custom Logo Upload Preview -->
+    <input type="file" id="logo-file-input" accept="image/png, image/jpeg, image/svg+xml, image/webp" class="hidden">
+
+    <!-- =====================================================================
+         1. NAVBAR FIXED MINIMALIS DENGAN SLOT LOGO KUSTOM
+         Max-width 1200px, rata kiri-kanan presisi, tombol upload logo terintegrasi rapi
+    ====================================================================== -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-40 bg-ivory/90 backdrop-blur-md hairline-b transition-all duration-300">
+        <div class="max-w-editorial mx-auto px-5 sm:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Brand Logo Slot (Left) -->
+            <div class="flex items-center gap-3">
+                <a href="#" class="flex items-center gap-3 group focus:outline-none">
+                    <!-- =======================================================================
+                         SLOT LOGO PERUSAHAAN ANDA:
+                         Ganti atribut src="" di bawah dengan path file logo Anda (contoh: "assets/logo-rxfatih.png")
+                         dan hapus class "hidden" pada tag <img> serta tambahkan "hidden" pada div #logo-fallback-emblem.
+                         Atau klik tombol "Pasang Logo" di sebelahnya untuk pratinjau langsung!
+                    ======================================================================== -->
+                    <div class="relative w-10 h-10 rounded-xl bg-espresso border border-terracotta/40 flex items-center justify-center overflow-hidden shadow-xs transition-transform duration-300 group-hover:scale-105">
+                        <!-- GANTI SRC DI SINI DENGAN PATH LOGO ANDA (misal: assets/logo.png) -->
+                        <img 
+                            id="brand-logo-img" 
+                            src="" 
+                            alt="Logo RXFatih Group" 
+                            class="hidden w-full h-full object-contain p-1 bg-white"
+                        >
+                        <!-- Fallback Architectural Monogram sebelum logo file dipasang -->
+                        <div id="logo-fallback-emblem" class="flex items-center justify-center w-full h-full text-terracotta font-serif text-xl tracking-tight">
+                            RX
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col">
+                        <span class="font-semibold text-espresso tracking-tight text-base leading-none">RXFatih Group</span>
+                        <span class="text-[11px] uppercase tracking-[0.16em] text-terracotta-dark font-medium mt-1">10th Anniversary</span>
+                    </div>
+                </a>
+
+                <!-- Discrete Custom Logo Upload Trigger -->
+                <button 
+                    type="button" 
+                    onclick="triggerLogoUpload()" 
+                    title="Unggah file logo PNG/SVG Anda untuk pratinjau langsung"
+                    class="hidden sm:inline-flex items-center gap-1.5 text-[11px] font-medium text-stoneText-secondary hover:text-terracotta bg-ivory-warm hover:bg-terracotta-soft/60 border border-hairline px-2.5 py-1 rounded-md transition-colors ml-1"
+                >
+                    <svg class="w-3 h-3 text-terracotta" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/>
+                    </svg>
+                    <span id="logo-upload-label">Pasang Logo</span>
+                </button>
+            </div>
+
+            <!-- Navigation Links (Center - Desktop) -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-stoneText-secondary">
+                <a href="#perjalanan" class="hover:text-terracotta transition-colors py-1">Kilas Balik</a>
+                <a href="#rangkaian-acara" class="hover:text-terracotta transition-colors py-1">Susunan Acara</a>
+                <a href="#apresiasi" class="hover:text-terracotta transition-colors py-1">Ucapan</a>
+                <a href="#rsvp-section" class="hover:text-terracotta transition-colors py-1">Konfirmasi</a>
+            </nav>
+
+            <!-- Right CTA & Mobile Menu Toggle -->
+            <div class="flex items-center gap-2.5">
+                <button onclick="openRsvpModal()" class="tactile-btn bg-terracotta hover:bg-terracotta-dark text-white text-xs sm:text-sm font-medium px-4 sm:px-5 py-2.5 rounded-lg shadow-xs focus:outline-none focus:ring-2 focus:ring-terracotta/40">
+                    RSVP Kehadiran
+                </button>
+                
+                <!-- Mobile Hamburger Button -->
+                <button id="mobile-menu-btn" aria-label="Buka Menu Navigasi" class="md:hidden p-2 rounded-lg text-espresso hover:bg-ivory-warm transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M4 7h16M4 12h16M4 17h16"/>
+                        <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-ivory border-t border-hairline px-5 py-5 space-y-3">
+            <a href="#perjalanan" class="mobile-nav-link block py-2 text-sm font-medium text-espresso hover:text-terracotta">Kilas Balik Satu Dekade</a>
+            <a href="#rangkaian-acara" class="mobile-nav-link block py-2 text-sm font-medium text-espresso hover:text-terracotta">Susunan Acara</a>
+            <a href="#apresiasi" class="mobile-nav-link block py-2 text-sm font-medium text-espresso hover:text-terracotta">Papan Ucapan &amp; Apresiasi</a>
+            <a href="#rsvp-section" class="mobile-nav-link block py-2 text-sm font-medium text-espresso hover:text-terracotta">Konfirmasi Kehadiran</a>
+            <div class="pt-2 border-t border-hairline">
+                <button type="button" onclick="triggerLogoUpload()" class="inline-flex items-center gap-2 text-xs font-medium text-terracotta-dark py-1.5">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/></svg>
+                    <span>Unggah Logo Perusahaan Anda</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- =====================================================================
+             2. HERO SECTION (ASYMMETRIC EDITORIAL SPLIT + AMBIENT MESH & PARALLAX)
+        ====================================================================== -->
+        <section class="relative architectural-grid hero-ambient-mesh pt-32 pb-20 md:pt-40 md:pb-24 overflow-hidden">
+            <div class="max-w-editorial mx-auto px-5 sm:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 items-center">
+                    
+                    <!-- Left Editorial Copy (7 Columns) -->
+                    <div class="lg:col-span-7 space-y-7 reveal-element">
+                        <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-terracotta-tint border border-terracotta/25 text-xs font-semibold text-terracotta-dark tracking-wider uppercase">
+                            <span class="w-2 h-2 rounded-full bg-terracotta"></span>
+                            <span>Dekade Pertama · 2016 — 2026</span>
+                        </div>
+
+                        <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-[64px] text-espresso leading-[1.07] tracking-tight">
+                            Satu Dekade Melangkah Bersama, <span class="italic text-terracotta">Membangun Nilai yang Bertahan.</span>
+                        </h1>
+
+                        <p class="text-base sm:text-lg text-stoneText-secondary leading-relaxed max-w-xl font-normal">
+                            Merayakan sepuluh tahun ketekunan, integritas, dan kolaborasi seluruh keluarga besar RXFatih Group dalam menghadirkan solusi bermakna bagi mitra dan masyarakat.
+                        </p>
+
+                        <div class="pt-2 flex flex-wrap items-center gap-4">
+                            <button onclick="openRsvpModal()" class="tactile-btn bg-terracotta hover:bg-terracotta-dark text-white font-medium text-sm px-7 py-3.5 rounded-lg shadow-xs">
+                                RSVP Kehadiran
+                            </button>
+                            <a href="#rangkaian-acara" class="inline-flex items-center gap-2 text-sm font-medium text-espresso hover:text-terracotta px-5 py-3.5 rounded-lg hairline-all bg-white/90 hover:bg-terracotta-tint/60 transition-colors">
+                                <span>Lihat Susunan Acara</span>
+                                <svg class="w-4 h-4 text-terracotta" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M19 9l-7 7-7-7"/>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <!-- Key Milestone Metrics -->
+                        <div class="pt-6 hairline-t grid grid-cols-3 gap-4 max-w-lg">
+                            <div>
+                                <p class="font-serif text-3xl sm:text-4xl text-terracotta leading-none">10 Tahun</p>
+                                <p class="text-xs text-stoneText-secondary mt-1.5">Perjalanan &amp; Dedikasi</p>
+                            </div>
+                            <div>
+                                <p class="font-serif text-3xl sm:text-4xl text-espresso leading-none">45+ Proyek</p>
+                                <p class="text-xs text-stoneText-secondary mt-1.5">Solusi Terimplementasi</p>
+                            </div>
+                            <div>
+                                <p class="font-serif text-3xl sm:text-4xl text-espresso leading-none">120+ Mitra</p>
+                                <p class="text-xs text-stoneText-secondary mt-1.5">Kepercayaan Korporasi</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Architectural Visual Frame with Subtle Parallax (5 Columns) -->
+                    <div class="lg:col-span-5 reveal-element" style="transition-delay: 120ms;">
+                        <div id="hero-parallax-frame" class="relative rounded-2xl overflow-hidden bg-espresso aspect-[4/5] shadow-xl border border-terracotta/25 will-change-transform">
+                            <!-- Warm Terracotta-Tinted Architectural Image -->
+                            <img 
+                                src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1000&q=85" 
+                                onerror="this.onerror=null; this.src='https://placehold.co/800x1000/1A1412/E05A1E?text=RXFatih+Group+10th';"
+                                alt="Ruang Kolaborasi RXFatih Group" 
+                                class="w-full h-full object-cover object-center opacity-85 mix-blend-luminosity transition-transform duration-700 hover:scale-[1.03]"
+                            >
+                            <!-- Warm Terracotta & Espresso Editorial Overlay -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-espresso via-terracotta-deep/25 to-terracotta/15"></div>
+
+                            <!-- Top-Right Floating Anniversary Seal -->
+                            <div id="hero-floating-seal" class="absolute top-5 right-5 bg-ivory/95 backdrop-blur-sm px-4 py-2.5 rounded-xl shadow-md border border-terracotta/30 will-change-transform">
+                                <span class="block text-[10px] uppercase tracking-[0.2em] text-terracotta-dark font-semibold">EST. 2016 — 10TH</span>
+                                <span class="font-serif text-lg tracking-wide text-espresso font-medium">28 November 2026</span>
+                            </div>
+
+                            <!-- Bottom Editorial Caption inside Frame -->
+                            <div class="absolute bottom-6 left-6 right-6 text-white">
+                                <div class="w-10 h-0.5 bg-terracotta mb-3"></div>
+                                <p class="text-xs uppercase tracking-[0.18em] text-terracotta-soft mb-1.5">The Dharmawangsa Jakarta</p>
+                                <p class="font-serif text-2xl leading-snug text-ivory">
+                                    "Kualitas kerja yang konsisten selalu melahirkan kepercayaan jangka panjang."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================================
+             KINETIC MARQUEE TICKER (REFINED EDITORIAL SEPARATOR)
+             Berhenti halus saat kursor diarahkan (hover pause)
+        ====================================================================== -->
+        <div class="marquee-wrapper bg-espresso text-ivory py-3.5 border-y border-terracotta/30 overflow-hidden select-none">
+            <div class="marquee-track flex items-center gap-8 text-xs font-medium tracking-[0.22em] uppercase">
+                <span class="flex items-center gap-8">
+                    <span class="text-terracotta-light font-semibold">10 TAHUN BERKARYA</span>
+                    <span class="text-terracotta">•</span>
+                    <span>INOVASI</span>
+                    <span class="text-terracotta">•</span>
+                    <span>INTEGRITAS</span>
+                    <span class="text-terracotta">•</span>
+                    <span>KOLABORASI</span>
+                    <span class="text-terracotta">•</span>
+                    <span class="text-terracotta-soft">RXFATIH GROUP 2016–2026</span>
+                    <span class="text-terracotta">•</span>
+                </span>
+                <span class="flex items-center gap-8" aria-hidden="true">
+                    <span class="text-terracotta-light font-semibold">10 TAHUN BERKARYA</span>
+                    <span class="text-terracotta">•</span>
+                    <span>INOVASI</span>
+                    <span class="text-terracotta">•</span>
+                    <span>INTEGRITAS</span>
+                    <span class="text-terracotta">•</span>
+                    <span>KOLABORASI</span>
+                    <span class="text-terracotta">•</span>
+                    <span class="text-terracotta-soft">RXFATIH GROUP 2016–2026</span>
+                    <span class="text-terracotta">•</span>
+                </span>
+                <span class="flex items-center gap-8" aria-hidden="true">
+                    <span class="text-terracotta-light font-semibold">10 TAHUN BERKARYA</span>
+                    <span class="text-terracotta">•</span>
+                    <span>INOVASI</span>
+                    <span class="text-terracotta">•</span>
+                    <span>INTEGRITAS</span>
+                    <span class="text-terracotta">•</span>
+                    <span>KOLABORASI</span>
+                    <span class="text-terracotta">•</span>
+                    <span class="text-terracotta-soft">RXFATIH GROUP 2016–2026</span>
+                    <span class="text-terracotta">•</span>
+                </span>
+            </div>
+        </div>
+
+        <!-- =====================================================================
+             3. SECTION KILAS BALIK PERJALANAN (INTERACTIVE ERA SELECTOR 2016, 2019, 2022, 2026)
+        ====================================================================== -->
+        <section id="perjalanan" class="py-20 md:py-28 bg-ivory-warm hairline-b">
+            <div class="max-w-editorial mx-auto px-5 sm:px-8">
+                
+                <!-- Section Header -->
+                <div class="max-w-2xl mb-14 reveal-element">
+                    <span class="text-xs font-semibold uppercase tracking-[0.18em] text-terracotta">Kilas Balik Perjalanan</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-espresso mt-2 leading-tight">
+                        Jejak Langkah Satu Dekade
+                    </h2>
+                </div>
+
+                <!-- Asymmetric Two-Column Split -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-start">
+                    
+                    <!-- Left Column: Narrative & Archival Spotlight Card (5 Columns) -->
+                    <div class="lg:col-span-5 space-y-7 reveal-element">
+                        <p class="text-stoneText-secondary text-base leading-relaxed">
+                            Berawal dari ruang kerja sederhana pada tahun 2016, setiap fase pertumbuhan RXFatih Group ditempa melalui kedisiplinan tim dan kepercayaan jangka panjang para klien.
+                        </p>
+
+                        <!-- Dynamic Archival Visual & Story Spotlight -->
+                        <div id="milestone-spotlight" class="bg-white rounded-2xl hairline-all shadow-sm overflow-hidden transition-all duration-300">
+                            <div class="relative h-48 bg-espresso overflow-hidden">
+                                <img 
+                                    id="spotlight-img"
+                                    src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=80" 
+                                    onerror="this.onerror=null; this.src='https://placehold.co/800x400/1A1412/E05A1E?text=Arsip+2016';"
+                                    alt="Arsip Perjalanan RXFatih Group"
+                                    class="w-full h-full object-cover opacity-85 transition-all duration-500"
+                                >
+                                <div class="absolute inset-0 bg-gradient-to-t from-espresso/85 via-espresso/20 to-transparent"></div>
+                                <div class="absolute bottom-4 left-5 right-5 flex items-end justify-between">
+                                    <span id="spotlight-badge" class="text-[11px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded bg-terracotta text-white">
+                                        Fase Pendirian
+                                    </span>
+                                    <span id="spotlight-metric" class="font-serif text-xl text-terracotta-soft">6 Pendiri Awal</span>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 id="spotlight-year" class="font-serif text-2xl text-espresso mb-2">2016 — Titik Awal di Jakarta</h3>
+                                <p id="spotlight-desc" class="text-sm text-stoneText-secondary leading-relaxed">
+                                    RXFatih Group resmi berdiri sebagai konsultan integrasi sistem dan solusi teknologi bisnis dengan enam anggota tim inti dan proyek perbankan pertama.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Interactive Era Selector List (7 Columns) -->
+                    <div class="lg:col-span-7 space-y-3.5 reveal-element" style="transition-delay: 100ms;">
+                        <!-- Milestone 2016 -->
+                        <div 
+                            class="milestone-item active tactile-card cursor-pointer p-6 rounded-xl border-l-4 border-terracotta bg-white shadow-xs hairline-all"
+                            data-year="2016 — Titik Awal di Jakarta"
+                            data-badge="Fase Pendirian"
+                            data-metric="6 Pendiri Awal"
+                            data-img="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=80"
+                            data-desc="RXFatih Group resmi berdiri sebagai konsultan integrasi sistem dan solusi teknologi bisnis dengan enam anggota tim inti dan proyek perbankan pertama."
+                            onclick="selectMilestone(this)"
+                        >
+                            <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-2">
+                                <h3 class="font-serif text-2xl text-espresso">2016 · Fondasi &amp; Kepercayaan Pertama</h3>
+                                <span class="text-xs font-semibold text-terracotta">Pendirian Perusahaan</span>
+                            </div>
+                            <p class="text-sm text-stoneText-secondary leading-relaxed">
+                                Mengawali kiprah dengan berfokus pada keandalan arsitektur sistem korporat dan tata kelola data yang presisi.
+                            </p>
+                        </div>
+
+                        <!-- Milestone 2019 -->
+                        <div 
+                            class="milestone-item tactile-card cursor-pointer p-6 rounded-xl border-l-4 border-transparent bg-ivory/80 hover:bg-white hairline-all"
+                            data-year="2019 — Ekspansi Layanan Nasional"
+                            data-badge="Pertumbuhan Tim"
+                            data-metric="50+ Profesional"
+                            data-img="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=80"
+                            data-desc="Membuka divisi Cloud & Enterprise Architecture serta memperluas tim hingga 50 profesional penuh waktu dengan tingkat retensi mitra di atas 92%."
+                            onclick="selectMilestone(this)"
+                        >
+                            <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-2">
+                                <h3 class="font-serif text-2xl text-espresso">2019 · Memperluas Kapabilitas</h3>
+                                <span class="text-xs font-medium text-stoneText-muted">50+ Anggota Tim</span>
+                            </div>
+                            <p class="text-sm text-stoneText-secondary leading-relaxed">
+                                Dipercaya menangani transformasi infrastruktur digital berskala nasional untuk sektor keuangan, logistik, dan energi.
+                            </p>
+                        </div>
+
+                        <!-- Milestone 2022 -->
+                        <div 
+                            class="milestone-item tactile-card cursor-pointer p-6 rounded-xl border-l-4 border-transparent bg-ivory/80 hover:bg-white hairline-all"
+                            data-year="2022 — Konsolidasi Pusat Regional"
+                            data-badge="Jaringan Regional"
+                            data-metric="4 Kota Operasional"
+                            data-img="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80"
+                            data-desc="Peresmian pusat operasional di Bandung, Surabaya, dan Bogor guna mendekatkan dukungan teknis langsung serta membina talenta teknologi daerah."
+                            onclick="selectMilestone(this)"
+                        >
+                            <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-2">
+                                <h3 class="font-serif text-2xl text-espresso">2022 · Hadir Lebih Dekat</h3>
+                                <span class="text-xs font-medium text-stoneText-muted">Ekspansi 4 Kota</span>
+                            </div>
+                            <p class="text-sm text-stoneText-secondary leading-relaxed">
+                                Memperkuat kolaborasi lintas kota untuk memastikan pendampingan mitra yang lebih responsif dan berkelanjutan.
+                            </p>
+                        </div>
+
+                        <!-- Milestone 2026 -->
+                        <div 
+                            class="milestone-item tactile-card cursor-pointer p-6 rounded-xl border-l-4 border-transparent bg-ivory/80 hover:bg-white hairline-all"
+                            data-year="2026 — Satu Dekade RXFatih Group"
+                            data-badge="HUT ke-10"
+                            data-metric="120+ Mitra Korporasi"
+                            data-img="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=900&q=80"
+                            data-desc="Menandai 10 tahun perjalanan bersama lebih dari 140 talenta dan 120 mitra korporasi, sekaligus meluncurkan program beasiswa dan riset berkelanjutan."
+                            onclick="selectMilestone(this)"
+                        >
+                            <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-2">
+                                <h3 class="font-serif text-2xl text-espresso">2026 · Satu Dekade Kebersamaan</h3>
+                                <span class="text-xs font-semibold text-terracotta">Dekade Kedua</span>
+                            </div>
+                            <p class="text-sm text-stoneText-secondary leading-relaxed">
+                                Merayakan kematangan organisasi dan melangkah menuju dekade kedua dengan standar kualitas yang lebih tinggi.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================================
+             4. SECTION SUSUNAN ACARA PERAYAAN (INTERACTIVE SESSION FILTER)
+        ====================================================================== -->
+        <section id="rangkaian-acara" class="py-20 md:py-28 px-5 sm:px-8 max-w-editorial mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 reveal-element">
+                <div>
+                    <span class="text-xs font-semibold uppercase tracking-[0.18em] text-terracotta">Susunan Acara</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-espresso mt-2">
+                        Rangkaian Perayaan HUT ke-10
+                    </h2>
+                </div>
+                <p class="text-sm text-stoneText-secondary max-w-md">
+                    Sabtu, 28 November 2026 · The Dharmawangsa Jakarta.<br>
+                    Dress code: <span class="font-semibold text-espresso">Smart Formal dengan Sentuhan Terracotta / Earth Tone</span>.
+                </p>
+            </div>
+
+            <!-- Interactive Session Filter Tabs -->
+            <div class="flex flex-wrap gap-2 pb-6 hairline-b mb-8 reveal-element" role="tablist">
+                <button onclick="filterSchedule('all', this)" class="tab-btn active-tab bg-terracotta text-white text-xs sm:text-sm font-medium px-4 py-2.5 rounded-lg transition-colors shadow-xs">
+                    Semua Sesi
+                </button>
+                <button onclick="filterSchedule('pagi', this)" class="tab-btn bg-white hover:bg-terracotta-tint text-stoneText-secondary text-xs sm:text-sm font-medium px-4 py-2.5 rounded-lg hairline-all transition-colors">
+                    Pagi — Seremoni
+                </button>
+                <button onclick="filterSchedule('siang', this)" class="tab-btn bg-white hover:bg-terracotta-tint text-stoneText-secondary text-xs sm:text-sm font-medium px-4 py-2.5 rounded-lg hairline-all transition-colors">
+                    Siang — Gala &amp; Penghargaan
+                </button>
+                <button onclick="filterSchedule('sore', this)" class="tab-btn bg-white hover:bg-terracotta-tint text-stoneText-secondary text-xs sm:text-sm font-medium px-4 py-2.5 rounded-lg hairline-all transition-colors">
+                    Sore — Ramah Tamah
+                </button>
+            </div>
+
+            <!-- Editorial Schedule Rows -->
+            <div id="schedule-list" class="divide-y divide-hairline bg-white rounded-2xl hairline-all shadow-sm overflow-hidden reveal-element">
+                
+                <!-- Item 1: Pagi — Seremoni -->
+                <div class="schedule-row p-6 sm:p-8 flex flex-col md:flex-row md:items-center gap-4 md:gap-8 hover:bg-terracotta-tint/45 transition-colors" data-category="pagi">
+                    <div class="md:w-44 shrink-0">
+                        <span class="font-mono text-sm font-semibold text-espresso">09.30 — 11.30 WIB</span>
+                        <span class="inline-block text-[11px] font-semibold text-terracotta-dark bg-terracotta-tint px-2.5 py-0.5 rounded mt-1.5">Pagi — Seremoni</span>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-serif text-2xl text-espresso">Registrasi, Syukuran &amp; Pemotongan Tumpeng Satu Dekade</h3>
+                        <p class="text-sm text-stoneText-secondary mt-1.5 leading-relaxed">
+                            Penyambutan karyawan lintas cabang dan tamu kehormatan, doa syukur bersama, serta pidato pembuka dari jajaran pendiri RXFatih Group.
+                        </p>
+                    </div>
+                    <div class="md:w-48 shrink-0 md:text-right">
+                        <span class="inline-flex items-center gap-1.5 text-xs font-medium text-stoneText-secondary bg-ivory-warm px-3 py-1.5 rounded-md border border-hairline">
+                            <svg class="w-3.5 h-3.5 text-terracotta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            Nusantara Lounge
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Item 2: Siang — Gala & Penghargaan -->
+                <div class="schedule-row p-6 sm:p-8 flex flex-col md:flex-row md:items-center gap-4 md:gap-8 hover:bg-terracotta-tint/45 transition-colors" data-category="siang">
+                    <div class="md:w-44 shrink-0">
+                        <span class="font-mono text-sm font-semibold text-espresso">12.30 — 15.00 WIB</span>
+                        <span class="inline-block text-[11px] font-semibold text-terracotta-dark bg-terracotta-tint px-2.5 py-0.5 rounded mt-1.5">Siang — Gala &amp; Penghargaan</span>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-serif text-2xl text-espresso">Jamuan Gala Siang &amp; Penganugerahan Masa Bakti</h3>
+                        <p class="text-sm text-stoneText-secondary mt-1.5 leading-relaxed">
+                            Makan siang bersama seluruh tim dan mitra strategis, dilanjutkan dengan pemberian lencana penghargaan bagi karyawan masa bakti 5 dan 10 tahun.
+                        </p>
+                    </div>
+                    <div class="md:w-48 shrink-0 md:text-right">
+                        <span class="inline-flex items-center gap-1.5 text-xs font-medium text-stoneText-secondary bg-ivory-warm px-3 py-1.5 rounded-md border border-hairline">
+                            <svg class="w-3.5 h-3.5 text-terracotta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            Grand Ballroom Utama
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Item 3: Sore — Ramah Tamah -->
+                <div class="schedule-row p-6 sm:p-8 flex flex-col md:flex-row md:items-center gap-4 md:gap-8 hover:bg-terracotta-tint/45 transition-colors" data-category="sore">
+                    <div class="md:w-44 shrink-0">
+                        <span class="font-mono text-sm font-semibold text-espresso">15.30 — 18.00 WIB</span>
+                        <span class="inline-block text-[11px] font-semibold text-terracotta-dark bg-terracotta-tint px-2.5 py-0.5 rounded mt-1.5">Sore — Ramah Tamah</span>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-serif text-2xl text-espresso">Sesi Foto Divisi, Musik Akustik &amp; Bincang Santai</h3>
+                        <p class="text-sm text-stoneText-secondary mt-1.5 leading-relaxed">
+                            Momen kebersamaan lintas generasi di area taman, sesi dokumentasi foto setiap divisi, serta penampilan akustik penutup perayaan.
+                        </p>
+                    </div>
+                    <div class="md:w-48 shrink-0 md:text-right">
+                        <span class="inline-flex items-center gap-1.5 text-xs font-medium text-stoneText-secondary bg-ivory-warm px-3 py-1.5 rounded-md border border-hairline">
+                            <svg class="w-3.5 h-3.5 text-terracotta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            Garden Terrace
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =====================================================================
+             5. SECTION PAPAN UCAPAN & APRESIASI (INTERACTIVE WISH WALL)
+        ====================================================================== -->
+        <section id="apresiasi" class="py-20 md:py-28 bg-espresso text-ivory">
+            <div class="max-w-editorial mx-auto px-5 sm:px-8">
+                
+                <!-- Top Part: Editorial Leadership Quote -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center pb-16 border-b border-white/10 reveal-element">
+                    <div class="lg:col-span-4">
+                        <span class="text-xs font-semibold uppercase tracking-[0.2em] text-terracotta-light">Catatan Pimpinan</span>
+                        <h2 class="font-serif text-3xl sm:text-4xl text-white mt-2 leading-tight">
+                            Terima Kasih Telah Menjaga Kepercayaan Ini
+                        </h2>
+                    </div>
+                    <div class="lg:col-span-8">
+                        <blockquote class="font-serif text-2xl sm:text-3xl text-ivory/95 leading-relaxed">
+                            “Sepuluh tahun perjalanan ini membuktikan bahwa ketekunan yang dijalankan dengan jujur akan selalu menemukan jalannya. Setiap pencapaian RXFatih Group hari ini adalah hasil keringat rekan-rekan di balik layar dan kepercayaan para mitra yang berjalan bersama kami.”
+                        </blockquote>
+                        <div class="mt-6 flex items-center gap-4">
+                            <div class="w-11 h-11 rounded-full bg-espresso-light border border-terracotta/50 flex items-center justify-center font-serif text-lg text-terracotta-light">
+                                RF
+                            </div>
+                            <div>
+                                <p class="font-semibold text-white text-sm">Rizky Fatih Pratama</p>
+                                <p class="text-xs text-stoneText-muted">Direktur Utama &amp; Co-Founder, RXFatih Group</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Part: Interactive Wish Wall -->
+                <div class="pt-16 grid grid-cols-1 lg:grid-cols-12 gap-12 reveal-element">
+                    
+                    <!-- Form Kirim Ucapan (5 Columns) -->
+                    <div class="lg:col-span-5">
+                        <h3 class="font-serif text-2xl sm:text-3xl text-white">Kirim Ucapan &amp; Harapan</h3>
+                        <p class="text-sm text-ivory/75 mt-2 leading-relaxed">
+                            Bagikan kesan singkat atau harapan Anda untuk langkah RXFatih Group di dekade kedua.
+                        </p>
+
+                        <form id="wish-form" class="mt-6 space-y-4">
+                            <div>
+                                <label for="wish-name" class="block text-xs font-medium text-ivory/85 mb-1.5">Nama Lengkap</label>
+                                <input 
+                                    type="text" 
+                                    id="wish-name" 
+                                    required
+                                    placeholder="Contoh: Nadia Kusuma"
+                                    class="w-full px-4 py-3 rounded-lg bg-espresso-light border border-white/15 text-white placeholder-white/40 text-sm focus:outline-none focus:border-terracotta transition-colors"
+                                >
+                            </div>
+                            <div>
+                                <label for="wish-role" class="block text-xs font-medium text-ivory/85 mb-1.5">Divisi / Instansi Mitra</label>
+                                <input 
+                                    type="text" 
+                                    id="wish-role" 
+                                    required
+                                    placeholder="Contoh: Product Engineering / Mitra Bank Nusantara"
+                                    class="w-full px-4 py-3 rounded-lg bg-espresso-light border border-white/15 text-white placeholder-white/40 text-sm focus:outline-none focus:border-terracotta transition-colors"
+                                >
+                            </div>
+                            <div>
+                                <label for="wish-message" class="block text-xs font-medium text-ivory/85 mb-1.5">Ucapan &amp; Harapan (Maks. 220 karakter)</label>
+                                <textarea 
+                                    id="wish-message" 
+                                    rows="3" 
+                                    maxlength="220"
+                                    required
+                                    placeholder="Tulis pesan singkat Anda di sini..."
+                                    class="w-full px-4 py-3 rounded-lg bg-espresso-light border border-white/15 text-white placeholder-white/40 text-sm focus:outline-none focus:border-terracotta transition-colors resize-none"
+                                ></textarea>
+                            </div>
+                            <button 
+                                type="submit" 
+                                class="tactile-btn w-full bg-terracotta hover:bg-terracotta-dark text-white font-semibold text-sm py-3.5 px-6 rounded-lg"
+                            >
+                                Tampilkan di Papan Ucapan
+                            </button>
+                            <p id="wish-feedback" class="hidden text-xs text-terracotta-light pt-1">
+                                Terima kasih, ucapan Anda telah ditambahkan ke papan apresiasi.
+                            </p>
+                        </form>
+                    </div>
+
+                    <!-- Real-time Papan Apresiasi Grid (7 Columns) -->
+                    <div class="lg:col-span-7">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs uppercase tracking-[0.16em] text-terracotta-light font-semibold">Papan Ucapan Rekan &amp; Mitra</span>
+                            <span id="wish-count" class="text-xs text-ivory/60">4 Ucapan Ditampilkan</span>
+                        </div>
+
+                        <div id="wish-list" class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-h-[440px] overflow-y-auto wish-scroll pr-1">
+                            <article class="bg-espresso-light/95 border border-white/10 hover:border-terracotta/40 transition-colors p-5 rounded-xl flex flex-col justify-between">
+                                <p class="text-sm text-ivory/90 leading-relaxed">
+                                    “Selamat ulang tahun ke-10 untuk RXFatih Group. Bangga bisa bertumbuh di lingkungan kerja yang saling menghargai dan tidak pernah pelit berbagi ilmu.”
+                                </p>
+                                <div class="mt-4 pt-3 border-t border-white/10">
+                                    <p class="text-xs font-semibold text-white">Dimas Prakoso</p>
+                                    <p class="text-[11px] text-terracotta-light">Lead Solutions Architect · Bergabung 2018</p>
+                                </div>
+                            </article>
+
+                            <article class="bg-espresso-light/95 border border-white/10 hover:border-terracotta/40 transition-colors p-5 rounded-xl flex flex-col justify-between">
+                                <p class="text-sm text-ivory/90 leading-relaxed">
+                                    “Lima tahun bermitra dengan tim RXFatih selalu memberi ketenangan pikiran. Komunikasinya jujur dan eksekusinya rapi. Sukses terus untuk dekade berikutnya.”
+                                </p>
+                                <div class="mt-4 pt-3 border-t border-white/10">
+                                    <p class="text-xs font-semibold text-white">Hendra Gunawan</p>
+                                    <p class="text-[11px] text-terracotta-light">VP IT Infrastructure · Mitra Perbankan</p>
+                                </div>
+                            </article>
+
+                            <article class="bg-espresso-light/95 border border-white/10 hover:border-terracotta/40 transition-colors p-5 rounded-xl flex flex-col justify-between">
+                                <p class="text-sm text-ivory/90 leading-relaxed">
+                                    “Dari zaman kantor lama sampai sekarang punya empat cabang, kekeluargaannya tetap terasa sama. Semoga kita semua sehat dan terus solid.”
+                                </p>
+                                <div class="mt-4 pt-3 border-t border-white/10">
+                                    <p class="text-xs font-semibold text-white">Siti Rahmawati</p>
+                                    <p class="text-[11px] text-terracotta-light">People &amp; Culture · Cabang Bandung</p>
+                                </div>
+                            </article>
+
+                            <article class="bg-espresso-light/95 border border-white/10 hover:border-terracotta/40 transition-colors p-5 rounded-xl flex flex-col justify-between">
+                                <p class="text-sm text-ivory/90 leading-relaxed">
+                                    “Terima kasih sudah menjadi tempat belajar terbaik sejak saya lulus kuliah. Selamat satu dekade berkarya untuk seluruh keluarga besar RXFatih!”
+                                </p>
+                                <div class="mt-4 pt-3 border-t border-white/10">
+                                    <p class="text-xs font-semibold text-white">Arief Budiman</p>
+                                    <p class="text-[11px] text-terracotta-light">Data Engineer · Cabang Surabaya</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================================
+             6. SECTION KONFIRMASI KEHADIRAN (EMBEDDED RSVP CARD)
+        ====================================================================== -->
+        <section id="rsvp-section" class="py-20 md:py-28 px-5 sm:px-8 max-w-editorial mx-auto">
+            <div class="bg-white rounded-2xl hairline-all shadow-sm p-8 sm:p-12 lg:p-16 reveal-element">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+                    
+                    <!-- Left Info (5 Columns) -->
+                    <div class="lg:col-span-5 space-y-4">
+                        <span class="text-xs font-semibold uppercase tracking-[0.18em] text-terracotta">Konfirmasi Kehadiran</span>
+                        <h2 class="font-serif text-3xl sm:text-4xl text-espresso leading-tight">
+                            Kami Menantikan Kehadiran Anda
+                        </h2>
+                        <p class="text-sm text-stoneText-secondary leading-relaxed">
+                            Mohon kesediaan Bapak/Ibu dan rekan-rekan untuk mengisi konfirmasi kehadiran paling lambat <span class="font-semibold text-espresso">23 November 2026</span> demi kelancaran pengaturan tempat duduk dan jamuan.
+                        </p>
+                        <div class="pt-3 space-y-2.5 text-xs text-stoneText-secondary">
+                            <p class="flex items-center gap-2.5">
+                                <span class="w-1.5 h-1.5 rounded-full bg-terracotta"></span>
+                                Akses parkir valet tersedia di lobi utama The Dharmawangsa.
+                            </p>
+                            <p class="flex items-center gap-2.5">
+                                <span class="w-1.5 h-1.5 rounded-full bg-terracotta"></span>
+                                Konfirmasi Anda akan langsung tercatat pada buku tamu panitia.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Right Embedded Form (7 Columns) -->
+                    <div class="lg:col-span-7">
+                        <form id="inline-rsvp-form" class="space-y-4" onsubmit="handleRsvpSubmit(event, 'inline')">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-medium text-espresso mb-1.5">Nama Lengkap *</label>
+                                    <input type="text" name="nama" required placeholder="Masukkan nama lengkap" class="w-full px-4 py-3 rounded-lg bg-ivory hairline-all text-sm text-espresso focus:outline-none focus:border-terracotta transition-colors">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-medium text-espresso mb-1.5">Divisi / Instansi *</label>
+                                    <input type="text" name="instansi" required placeholder="Contoh: Divisi Finance / PT Mitra" class="w-full px-4 py-3 rounded-lg bg-ivory hairline-all text-sm text-espresso focus:outline-none focus:border-terracotta transition-colors">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-medium text-espresso mb-1.5">Status Kehadiran *</label>
+                                    <select name="kehadiran" required class="w-full px-4 py-3 rounded-lg bg-ivory hairline-all text-sm text-espresso focus:outline-none focus:border-terracotta transition-colors">
+                                        <option value="Hadir Seluruh Sesi">Ya, Hadir Seluruh Sesi</option>
+                                        <option value="Hadir Sesi Siang & Gala">Hadir Sesi Gala Siang</option>
+                                        <option value="Berhalangan Hadir">Maaf, Berhalangan Hadir</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-medium text-espresso mb-1.5">Jumlah Tamu</label>
+                                    <select name="jumlah" class="w-full px-4 py-3 rounded-lg bg-ivory hairline-all text-sm text-espresso focus:outline-none focus:border-terracotta transition-colors">
+                                        <option value="1 Orang">1 Orang (Pribadi)</option>
+                                        <option value="2 Orang">2 Orang (Dengan Pendamping)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-medium text-espresso mb-1.5">Catatan Tambahan (Opsional)</label>
+                                <input type="text" name="catatan" placeholder="Preferensi menu atau kebutuhan khusus lainnya" class="w-full px-4 py-3 rounded-lg bg-ivory hairline-all text-sm text-espresso focus:outline-none focus:border-terracotta transition-colors">
+                            </div>
+
+                            <div class="pt-2">
+                                <button type="submit" class="tactile-btn w-full sm:w-auto bg-terracotta hover:bg-terracotta-dark text-white font-medium text-sm px-8 py-3.5 rounded-lg shadow-xs">
+                                    Kirim Konfirmasi Kehadiran
+                                </button>
+                            </div>
+                        </form>
+
+                        <!-- Confirmation Feedback Box -->
+                        <div id="inline-rsvp-success" class="hidden bg-terracotta-tint border border-terracotta/30 rounded-xl p-6 space-y-2">
+                            <div class="flex items-center gap-2.5 text-espresso font-semibold text-base">
+                                <svg class="w-5 h-5 text-terracotta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                <span>Konfirmasi Kehadiran Tercatat</span>
+                            </div>
+                            <p id="inline-rsvp-summary" class="text-sm text-stoneText-secondary leading-relaxed"></p>
+                            <button type="button" onclick="resetRsvpForm('inline')" class="text-xs font-semibold text-terracotta-dark hover:underline pt-1">
+                                Ubah data konfirmasi
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =====================================================================
+         7. CLOSING SINGLE-SCREEN FOOTER (TERRACOTTA-DARK & CUSTOM LOGO SLOT)
+    ====================================================================== -->
+    <footer id="lokasi" class="closing bg-espresso text-ivory border-t-4 border-terracotta pt-16 pb-12">
+        <div class="max-w-editorial mx-auto px-5 sm:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+                
+                <!-- Brand & Custom Logo Slot (5 Columns) -->
+                <div class="md:col-span-5 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-espresso-light border border-terracotta/50 flex items-center justify-center overflow-hidden">
+                            <img 
+                                id="footer-logo-img" 
+                                src="" 
+                                alt="Logo RXFatih Group" 
+                                class="hidden w-full h-full object-contain p-1 bg-white"
+                            >
+                            <div id="footer-logo-fallback" class="text-terracotta-light font-serif text-lg">
+                                RX
+                            </div>
+                        </div>
+                        <div>
+                            <span class="font-semibold text-white tracking-tight text-base block leading-none">RXFatih Group</span>
+                            <span class="text-[11px] uppercase tracking-[0.16em] text-terracotta-light mt-1 block">2016 — 2026</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-ivory/75 leading-relaxed max-w-sm">
+                        Perayaan Satu Dekade RXFatih Group. Melangkah bersama membangun inovasi, integritas, dan kemitraan yang berkelanjutan.
+                    </p>
+                </div>
+
+                <!-- Lokasi & Tanggal Acara (4 Columns) -->
+                <div class="md:col-span-4 space-y-2.5">
+                    <h4 class="text-xs font-semibold uppercase tracking-[0.16em] text-terracotta-light">Lokasi &amp; Waktu Perayaan</h4>
+                    <p class="text-sm font-medium text-white">Sabtu, 28 November 2026 · 09.30 WIB</p>
+                    <p class="text-sm text-ivory/75 leading-relaxed">
+                        The Dharmawangsa Jakarta<br>
+                        Jl. Brawijaya Raya No. 26, Kebayoran Baru,<br>
+                        Jakarta Selatan 12160
+                    </p>
+                    <a href="https://maps.google.com/?q=The+Dharmawangsa+Jakarta" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-medium text-terracotta-light hover:text-white transition-colors pt-1">
+                        <span>Buka Peta Lokasi di Google Maps</span>
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                    </a>
+                </div>
+
+                <!-- Kontak Panitia (3 Columns) -->
+                <div class="md:col-span-3 space-y-2.5">
+                    <h4 class="text-xs font-semibold uppercase tracking-[0.16em] text-terracotta-light">Sekretariat Panitia HUT</h4>
+                    <p class="text-sm text-ivory/75">Corporate Communication &amp; People</p>
+                    <p class="text-sm text-white font-medium">hut10@rxfatihgroup.co.id</p>
+                    <p class="text-sm text-ivory/75">+62 21 5088 2016 (Ext. 10)</p>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright Bar -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-ivory/55">
+                <p>&copy; 2016–2026 PT RXFatih Teknologi Nusantara (RXFatih Group). Seluruh hak cipta dilindungi.</p>
+                <div class="flex items-center gap-6">
+                    <a href="#perjalanan" class="hover:text-terracotta-light transition-colors">Kilas Balik</a>
+                    <a href="#rangkaian-acara" class="hover:text-terracotta-light transition-colors">Susunan Acara</a>
+                    <a href="#apresiasi" class="hover:text-terracotta-light transition-colors">Ucapan</a>
+                    <a href="#rsvp-section" class="hover:text-terracotta-light transition-colors">Konfirmasi</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =====================================================================
+         RSVP MODAL DIALOG (Triggered from Navbar / Hero CTA)
+    ====================================================================== -->
+    <div id="rsvp-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-espresso/65 backdrop-blur-xs transition-opacity">
+        <div class="bg-white w-full max-w-lg rounded-2xl shadow-2xl hairline-all overflow-hidden transform transition-all">
+            <!-- Modal Header -->
+            <div class="px-6 py-5 bg-ivory hairline-b flex items-center justify-between">
+                <div>
+                    <span class="text-[11px] uppercase tracking-widest text-terracotta font-semibold">HUT ke-10 RXFatih Group</span>
+                    <h3 class="font-serif text-2xl text-espresso">RSVP Kehadiran</h3>
+                </div>
+                <button onclick="closeRsvpModal()" aria-label="Tutup Modal" class="p-2 rounded-lg text-stoneText-muted hover:text-espresso hover:bg-ivory-warm transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="p-6">
+                <form id="modal-rsvp-form" class="space-y-4" onsubmit="handleRsvpSubmit(event, 'modal')">
+                    <div>
+                        <label class="block text-xs font-medium text-espresso mb-1.5">Nama Lengkap *</label>
+                        <input type="text" name="nama" required placeholder="Masukkan nama lengkap Anda" class="w-full px-4 py-2.5 rounded-lg bg-ivory hairline-all text-sm text-espresso focus:outline-none focus:border-terracotta">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-espresso mb-1.5">Divisi / Instansi *</label>
+                        <input type="text" name="instansi" required placeholder="Contoh: Engineering / Mitra Klien" class="w-full px-4 py-2.5 rounded-lg bg-ivory hairline-all text-sm text-espresso focus:outline-none focus:border-terracotta">
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-medium text-espresso mb-1.5">Kehadiran *</label>
+                            <select name="kehadiran" required class="w-full px-4 py-2.5 rounded-lg bg-ivory hairline-all text-sm text-espresso focus:outline-none focus:border-terracotta">
+                                <option value="Hadir Seluruh Sesi">Hadir Seluruh Sesi</option>
+                                <option value="Hadir Sesi Gala Siang">Hadir Sesi Gala Siang</option>
+                                <option value="Berhalangan Hadir">Berhalangan Hadir</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-medium text-espresso mb-1.5">Jumlah Tamu</label>
+                            <select name="jumlah" class="w-full px-4 py-2.5 rounded-lg bg-ivory hairline-all text-sm text-espresso focus:outline-none focus:border-terracotta">
+                                <option value="1 Orang">1 Orang</option>
+                                <option value="2 Orang">2 Orang</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-espresso mb-1.5">Catatan (Opsional)</label>
+                        <input type="text" name="catatan" placeholder="Catatan singkat untuk panitia" class="w-full px-4 py-2.5 rounded-lg bg-ivory hairline-all text-sm text-espresso focus:outline-none focus:border-terracotta">
+                    </div>
+                    <div class="pt-3 flex items-center justify-end gap-3">
+                        <button type="button" onclick="closeRsvpModal()" class="px-4 py-2.5 text-xs font-medium text-stoneText-secondary hover:text-espresso">
+                            Batal
+                        </button>
+                        <button type="submit" class="tactile-btn bg-terracotta hover:bg-terracotta-dark text-white text-sm font-medium px-6 py-2.5 rounded-lg">
+                            Simpan Konfirmasi
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Modal Success Feedback -->
+                <div id="modal-rsvp-success" class="hidden py-4 text-center space-y-3">
+                    <div class="w-12 h-12 rounded-full bg-terracotta-tint text-terracotta mx-auto flex items-center justify-center">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    </div>
+                    <h4 class="font-serif text-2xl text-espresso">Terima Kasih atas Konfirmasi Anda</h4>
+                    <p id="modal-rsvp-summary" class="text-sm text-stoneText-secondary leading-relaxed"></p>
+                    <div class="pt-3">
+                        <button type="button" onclick="closeRsvpModal()" class="bg-terracotta text-white text-xs font-medium px-6 py-2.5 rounded-lg">
+                            Selesai
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =====================================================================
+         JAVASCRIPT: INTERAKTIVITAS, PARALLAX, READING BAR & LIVE LOGO UPLOAD
+    ====================================================================== -->
+    <script>
+        // 1. Reading Progress Bar & Subtle Hero Parallax
+        const progressBar = document.getElementById('reading-progress');
+        const heroFrame = document.getElementById('hero-parallax-frame');
+        const heroSeal = document.getElementById('hero-floating-seal');
+
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+            progressBar.style.width = `${Math.min(100, Math.max(0, scrollPercent))}%`;
+
+            // Subtle parallax depth only on desktop when hero is in view
+            if (window.innerWidth >= 1024 && scrollTop < 750) {
+                if (heroFrame) {
+                    heroFrame.style.transform = `translateY(${scrollTop * 0.04}px)`;
+                }
+                if (heroSeal) {
+                    heroSeal.style.transform = `translateY(${-scrollTop * 0.03}px)`;
+                }
+            }
+        }, { passive: true });
+
+        // 2. Custom Logo Upload & Live Preview Handler
+        const logoFileInput = document.getElementById('logo-file-input');
+        const brandLogoImg = document.getElementById('brand-logo-img');
+        const logoFallbackEmblem = document.getElementById('logo-fallback-emblem');
+        const footerLogoImg = document.getElementById('footer-logo-img');
+        const footerLogoFallback = document.getElementById('footer-logo-fallback');
+        const logoUploadLabel = document.getElementById('logo-upload-label');
+
+        function applyCustomLogo(dataUrl) {
+            if (!dataUrl) return;
+            brandLogoImg.src = dataUrl;
+            brandLogoImg.classList.remove('hidden');
+            logoFallbackEmblem.classList.add('hidden');
+
+            footerLogoImg.src = dataUrl;
+            footerLogoImg.classList.remove('hidden');
+            footerLogoFallback.classList.add('hidden');
+
+            if (logoUploadLabel) {
+                logoUploadLabel.textContent = 'Ganti Logo';
+            }
+        }
+
+        function triggerLogoUpload() {
+            logoFileInput.click();
+        }
+
+        logoFileInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = (event) => {
+                const resultUrl = event.target.result;
+                applyCustomLogo(resultUrl);
+                try {
+                    localStorage.setItem('rxfatih_custom_logo', resultUrl);
+                } catch (err) {
+                    // Ignore storage quota issues for large images
+                }
+            };
+            reader.readAsDataURL(file);
+        });
+
+        // 3. Subtle Fade-Up Intersection Observer & Restore Saved Logo
+        document.addEventListener('DOMContentLoaded', () => {
+            // Check if user already set a logo path in HTML src or uploaded previously
+            const initialSrc = brandLogoImg.getAttribute('src');
+            if (initialSrc && initialSrc.trim() !== '') {
+                applyCustomLogo(initialSrc);
+            } else {
+                try {
+                    const savedLogo = localStorage.getItem('rxfatih_custom_logo');
+                    if (savedLogo) applyCustomLogo(savedLogo);
+                } catch (err) {}
+            }
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.12
+            };
+
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal-element').forEach(el => {
+                revealObserver.observe(el);
+            });
+        });
+
+        // 4. Mobile Navigation Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const iconOpen = document.getElementById('menu-icon-open');
+        const iconClose = document.getElementById('menu-icon-close');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                iconOpen.classList.add('hidden');
+                iconClose.classList.remove('hidden');
+            } else {
+                mobileMenu.classList.add('hidden');
+                iconOpen.classList.remove('hidden');
+                iconClose.classList.add('hidden');
+            }
+        });
+
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                iconOpen.classList.remove('hidden');
+                iconClose.classList.add('hidden');
+            });
+        });
+
+        // 5. Interactive Timeline Era Selector
+        function selectMilestone(element) {
+            document.querySelectorAll('.milestone-item').forEach(item => {
+                item.classList.remove('active', 'border-terracotta', 'bg-white', 'shadow-xs');
+                item.classList.add('border-transparent', 'bg-ivory/80');
+            });
+
+            element.classList.remove('border-transparent', 'bg-ivory/80');
+            element.classList.add('active', 'border-terracotta', 'bg-white', 'shadow-xs');
+
+            document.getElementById('spotlight-year').textContent = element.getAttribute('data-year');
+            document.getElementById('spotlight-badge').textContent = element.getAttribute('data-badge');
+            document.getElementById('spotlight-metric').textContent = element.getAttribute('data-metric');
+            document.getElementById('spotlight-desc').textContent = element.getAttribute('data-desc');
+            
+            const spotlightImg = document.getElementById('spotlight-img');
+            const newImg = element.getAttribute('data-img');
+            if (newImg && spotlightImg.src !== newImg) {
+                spotlightImg.style.opacity = '0.4';
+                setTimeout(() => {
+                    spotlightImg.src = newImg;
+                    spotlightImg.style.opacity = '0.85';
+                }, 160);
+            }
+        }
+
+        // 6. Interactive Schedule Tab Filter
+        function filterSchedule(category, btnElement) {
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('bg-terracotta', 'text-white', 'shadow-xs');
+                btn.classList.add('bg-white', 'text-stoneText-secondary', 'hairline-all');
+            });
+            btnElement.classList.remove('bg-white', 'text-stoneText-secondary', 'hairline-all');
+            btnElement.classList.add('bg-terracotta', 'text-white', 'shadow-xs');
+
+            document.querySelectorAll('.schedule-row').forEach(row => {
+                if (category === 'all' || row.getAttribute('data-category') === category) {
+                    row.classList.remove('hidden');
+                } else {
+                    row.classList.add('hidden');
+                }
+            });
+        }
+
+        // 7. Real-Time Interactive Wish Wall
+        const wishForm = document.getElementById('wish-form');
+        const wishList = document.getElementById('wish-list');
+        const wishCount = document.getElementById('wish-count');
+        const wishFeedback = document.getElementById('wish-feedback');
+
+        function escapeHTML(str) {
+            const div = document.createElement('div');
+            div.textContent = str;
+            return div.innerHTML;
+        }
+
+        wishForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const nameInput = document.getElementById('wish-name');
+            const roleInput = document.getElementById('wish-role');
+            const msgInput = document.getElementById('wish-message');
+
+            const name = escapeHTML(nameInput.value.trim());
+            const role = escapeHTML(roleInput.value.trim());
+            const message = escapeHTML(msgInput.value.trim());
+
+            if (!name || !role || !message) return;
+
+            const newCard = document.createElement('article');
+            newCard.className = 'bg-espresso-light border border-terracotta/60 p-5 rounded-xl flex flex-col justify-between transition-all duration-500';
+            newCard.innerHTML = `
+                <p class="text-sm text-white leading-relaxed">
+                    “${message}”
+                </p>
+                <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between">
+                    <div>
+                        <p class="text-xs font-semibold text-white">${name}</p>
+                        <p class="text-[11px] text-terracotta-light">${role}</p>
+                    </div>
+                    <span class="text-[10px] uppercase tracking-wider px-2 py-0.5 rounded bg-terracotta/25 text-terracotta-light font-semibold">Baru</span>
+                </div>
+            `;
+
+            wishList.prepend(newCard);
+            wishList.scrollTo({ top: 0, behavior: 'smooth' });
+
+            const totalWishes = wishList.children.length;
+            wishCount.textContent = `${totalWishes} Ucapan Ditampilkan`;
+
+            wishForm.reset();
+            wishFeedback.classList.remove('hidden');
+            setTimeout(() => {
+                wishFeedback.classList.add('hidden');
+            }, 4000);
+        });
+
+        // 8. RSVP Modal & Form Handling
+        const rsvpModal = document.getElementById('rsvp-modal');
+
+        function openRsvpModal() {
+            resetRsvpForm('modal');
+            rsvpModal.classList.remove('hidden');
+            rsvpModal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeRsvpModal() {
+            rsvpModal.classList.add('hidden');
+            rsvpModal.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        rsvpModal.addEventListener('click', (e) => {
+            if (e.target === rsvpModal) {
+                closeRsvpModal();
+            }
+        });
+
+        function handleRsvpSubmit(event, source) {
+            event.preventDefault();
+            const form = event.target;
+            const formData = new FormData(form);
+            const nama = formData.get('nama');
+            const instansi = formData.get('instansi');
+            const kehadiran = formData.get('kehadiran');
+            const jumlah = formData.get('jumlah');
+
+            const summaryText = `Atas nama ${nama} (${instansi}) — Status: ${kehadiran} (${jumlah}). Sampai jumpa di The Dharmawangsa Jakarta pada 28 November 2026.`;
+
+            if (source === 'inline') {
+                form.classList.add('hidden');
+                document.getElementById('inline-rsvp-summary').textContent = summaryText;
+                document.getElementById('inline-rsvp-success').classList.remove('hidden');
+            } else {
+                form.classList.add('hidden');
+                document.getElementById('modal-rsvp-summary').textContent = summaryText;
+                document.getElementById('modal-rsvp-success').classList.remove('hidden');
+            }
+        }
+
+        function resetRsvpForm(source) {
+            if (source === 'inline') {
+                const form = document.getElementById('inline-rsvp-form');
+                form.reset();
+                form.classList.remove('hidden');
+                document.getElementById('inline-rsvp-success').classList.add('hidden');
+            } else {
+                const form = document.getElementById('modal-rsvp-form');
+                form.reset();
+                form.classList.remove('hidden');
+                document.getElementById('modal-rsvp-success').classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
